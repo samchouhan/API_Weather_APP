@@ -19,11 +19,14 @@ if data['cod'] == 200:
     description = data['weather'][0]['description']
     weather=data['weather'][0]['description']
     humidity = data['main']['humidity']
+    wind = data["wind"]["speed"]
+
     
     print("\nWeather in {}:",city)
     print("Temperature: {}°C".format(temprature))
     print("condition:",weather)
     print("Humidity: {}%".format(humidity))
+    print("Wind Speed:", wind, "m/s")
 else:
     print("City not found. Please check the city name and try again.")
     
